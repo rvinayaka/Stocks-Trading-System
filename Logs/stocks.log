@@ -677,3 +677,9 @@ INFO:2023-04-05 09:48:58,199:app:Displayed transaction history
 WARNING:2023-04-05 09:48:58,199:app:Hence stock's report card displayed, closing the connection
 WARNING:2023-04-05 09:48:58,199:app:Hence stock's report card displayed, closing the connection
 WARNING:2023-04-05 09:48:58,199:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 12:41:44,329:app:Starting the db connection to display stocks in the list
+INFO:2023-04-05 12:41:44,894:app:Displayed list of all stocks in the list
+INFO:2023-04-05 12:41:44,894:app:Displayed list of all stocks in the list
+WARNING:2023-04-05 12:41:44,895:app:Closing the connection
+WARNING:2023-04-05 12:41:44,895:app:Closing the connection
+WARNING:2023-04-05 12:41:44,895:app:Closing the connection
