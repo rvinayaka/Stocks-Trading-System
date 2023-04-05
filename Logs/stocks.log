@@ -1,0 +1,679 @@
+WARNING:2023-04-05 09:41:35,259:app:Starting the db connection to add new stocks
+ERROR:2023-04-05 09:41:35,260:app:Error occurred: 'stockName'
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 32, in add_new_stock
+    stock_name = request.json["stockName"]
+KeyError: 'stockName'
+ERROR:2023-04-05 09:41:35,260:app:Error occurred: 'stockName'
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 32, in add_new_stock
+    stock_name = request.json["stockName"]
+KeyError: 'stockName'
+WARNING:2023-04-05 09:41:35,261:app:Hence stocks added, closing the connection
+WARNING:2023-04-05 09:41:35,261:app:Hence stocks added, closing the connection
+WARNING:2023-04-05 09:41:35,261:app:Hence stocks added, closing the connection
+ERROR:2023-04-05 09:41:35,261:app:Exception on /stocks [POST]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 32, in add_new_stock
+    stock_name = request.json["stockName"]
+KeyError: 'stockName'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 54, in add_new_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type KeyError is not JSON serializable
+ERROR:2023-04-05 09:41:35,261:app:Exception on /stocks [POST]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 32, in add_new_stock
+    stock_name = request.json["stockName"]
+KeyError: 'stockName'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 54, in add_new_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type KeyError is not JSON serializable
+ERROR:2023-04-05 09:41:35,261:app:Exception on /stocks [POST]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 32, in add_new_stock
+    stock_name = request.json["stockName"]
+KeyError: 'stockName'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 54, in add_new_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type KeyError is not JSON serializable
+WARNING:2023-04-05 09:41:54,430:app:Starting the db connection to add new stocks
+WARNING:2023-04-05 09:41:54,430:app:Starting the db connection to add new stocks
+WARNING:2023-04-05 09:41:54,430:app:Starting the db connection to add new stocks
+WARNING:2023-04-05 09:41:54,430:app:Starting the db connection to add new stocks
+INFO:2023-04-05 09:41:54,604:app:ABCD added in the list
+INFO:2023-04-05 09:41:54,604:app:ABCD added in the list
+INFO:2023-04-05 09:41:54,604:app:ABCD added in the list
+INFO:2023-04-05 09:41:54,604:app:ABCD added in the list
+INFO:2023-04-05 09:41:54,604:app:ABCD added in the list
+WARNING:2023-04-05 09:41:54,605:app:Hence stocks added, closing the connection
+WARNING:2023-04-05 09:41:54,605:app:Hence stocks added, closing the connection
+WARNING:2023-04-05 09:41:54,605:app:Hence stocks added, closing the connection
+WARNING:2023-04-05 09:41:54,605:app:Hence stocks added, closing the connection
+WARNING:2023-04-05 09:41:54,605:app:Hence stocks added, closing the connection
+WARNING:2023-04-05 09:41:54,605:app:Hence stocks added, closing the connection
+WARNING:2023-04-05 09:42:09,268:app:Starting the db connection to display stocks in the list
+WARNING:2023-04-05 09:42:09,268:app:Starting the db connection to display stocks in the list
+WARNING:2023-04-05 09:42:09,268:app:Starting the db connection to display stocks in the list
+WARNING:2023-04-05 09:42:09,268:app:Starting the db connection to display stocks in the list
+WARNING:2023-04-05 09:42:09,268:app:Starting the db connection to display stocks in the list
+WARNING:2023-04-05 09:42:09,268:app:Starting the db connection to display stocks in the list
+WARNING:2023-04-05 09:42:09,268:app:Starting the db connection to display stocks in the list
+INFO:2023-04-05 09:42:09,419:app:Displayed list of all stocks in the list
+INFO:2023-04-05 09:42:09,419:app:Displayed list of all stocks in the list
+INFO:2023-04-05 09:42:09,419:app:Displayed list of all stocks in the list
+INFO:2023-04-05 09:42:09,419:app:Displayed list of all stocks in the list
+INFO:2023-04-05 09:42:09,419:app:Displayed list of all stocks in the list
+INFO:2023-04-05 09:42:09,419:app:Displayed list of all stocks in the list
+INFO:2023-04-05 09:42:09,419:app:Displayed list of all stocks in the list
+INFO:2023-04-05 09:42:09,419:app:Displayed list of all stocks in the list
+WARNING:2023-04-05 09:42:09,420:app:Hence stocks displayed, closing the connection
+WARNING:2023-04-05 09:42:09,420:app:Hence stocks displayed, closing the connection
+WARNING:2023-04-05 09:42:09,420:app:Hence stocks displayed, closing the connection
+WARNING:2023-04-05 09:42:09,420:app:Hence stocks displayed, closing the connection
+WARNING:2023-04-05 09:42:09,420:app:Hence stocks displayed, closing the connection
+WARNING:2023-04-05 09:42:09,420:app:Hence stocks displayed, closing the connection
+WARNING:2023-04-05 09:42:09,420:app:Hence stocks displayed, closing the connection
+WARNING:2023-04-05 09:42:09,420:app:Hence stocks displayed, closing the connection
+WARNING:2023-04-05 09:42:09,420:app:Hence stocks displayed, closing the connection
+WARNING:2023-04-05 09:42:22,011:app:Starting the db connection to display stock's report card
+WARNING:2023-04-05 09:42:22,011:app:Starting the db connection to display stock's report card
+WARNING:2023-04-05 09:42:22,011:app:Starting the db connection to display stock's report card
+WARNING:2023-04-05 09:42:22,011:app:Starting the db connection to display stock's report card
+WARNING:2023-04-05 09:42:22,011:app:Starting the db connection to display stock's report card
+WARNING:2023-04-05 09:42:22,011:app:Starting the db connection to display stock's report card
+WARNING:2023-04-05 09:42:22,011:app:Starting the db connection to display stock's report card
+WARNING:2023-04-05 09:42:22,011:app:Starting the db connection to display stock's report card
+WARNING:2023-04-05 09:42:22,011:app:Starting the db connection to display stock's report card
+WARNING:2023-04-05 09:42:22,011:app:Starting the db connection to display stock's report card
+INFO:2023-04-05 09:42:22,151:app:Displayed report card of stocks mo. 2
+INFO:2023-04-05 09:42:22,151:app:Displayed report card of stocks mo. 2
+INFO:2023-04-05 09:42:22,151:app:Displayed report card of stocks mo. 2
+INFO:2023-04-05 09:42:22,151:app:Displayed report card of stocks mo. 2
+INFO:2023-04-05 09:42:22,151:app:Displayed report card of stocks mo. 2
+INFO:2023-04-05 09:42:22,151:app:Displayed report card of stocks mo. 2
+INFO:2023-04-05 09:42:22,151:app:Displayed report card of stocks mo. 2
+INFO:2023-04-05 09:42:22,151:app:Displayed report card of stocks mo. 2
+INFO:2023-04-05 09:42:22,151:app:Displayed report card of stocks mo. 2
+INFO:2023-04-05 09:42:22,151:app:Displayed report card of stocks mo. 2
+INFO:2023-04-05 09:42:22,151:app:Displayed report card of stocks mo. 2
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:42:22,152:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:43:40,232:app:Starting the db connection to display stock's report card
+ERROR:2023-04-05 09:43:40,232:app:Error occurred: can't adapt type 'builtin_function_or_method'
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (id, ))
+psycopg2.ProgrammingError: can't adapt type 'builtin_function_or_method'
+ERROR:2023-04-05 09:43:40,232:app:Error occurred: can't adapt type 'builtin_function_or_method'
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (id, ))
+psycopg2.ProgrammingError: can't adapt type 'builtin_function_or_method'
+WARNING:2023-04-05 09:43:40,233:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:43:40,233:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:43:40,233:app:Hence stock's report card displayed, closing the connection
+ERROR:2023-04-05 09:43:40,233:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (id, ))
+psycopg2.ProgrammingError: can't adapt type 'builtin_function_or_method'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type ProgrammingError is not JSON serializable
+ERROR:2023-04-05 09:43:40,233:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (id, ))
+psycopg2.ProgrammingError: can't adapt type 'builtin_function_or_method'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type ProgrammingError is not JSON serializable
+ERROR:2023-04-05 09:43:40,233:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (id, ))
+psycopg2.ProgrammingError: can't adapt type 'builtin_function_or_method'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type ProgrammingError is not JSON serializable
+WARNING:2023-04-05 09:45:12,433:app:Starting the db connection to display stock's report card
+ERROR:2023-04-05 09:45:12,433:app:Error occurred: name 'sno' is not defined
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+ERROR:2023-04-05 09:45:12,433:app:Error occurred: name 'sno' is not defined
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+WARNING:2023-04-05 09:45:12,434:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:45:12,434:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:45:12,434:app:Hence stock's report card displayed, closing the connection
+ERROR:2023-04-05 09:45:12,434:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type NameError is not JSON serializable
+ERROR:2023-04-05 09:45:12,434:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type NameError is not JSON serializable
+ERROR:2023-04-05 09:45:12,434:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type NameError is not JSON serializable
+WARNING:2023-04-05 09:45:48,135:app:Starting the db connection to display stock's report card
+ERROR:2023-04-05 09:45:48,136:app:Error occurred: name 'sno' is not defined
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+ERROR:2023-04-05 09:45:48,136:app:Error occurred: name 'sno' is not defined
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+WARNING:2023-04-05 09:45:48,137:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:45:48,137:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:45:48,137:app:Hence stock's report card displayed, closing the connection
+ERROR:2023-04-05 09:45:48,137:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type NameError is not JSON serializable
+ERROR:2023-04-05 09:45:48,137:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type NameError is not JSON serializable
+ERROR:2023-04-05 09:45:48,137:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type NameError is not JSON serializable
+WARNING:2023-04-05 09:46:40,214:app:Starting the db connection to display stock's report card
+ERROR:2023-04-05 09:46:40,214:app:Error occurred: name 'sno' is not defined
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+ERROR:2023-04-05 09:46:40,214:app:Error occurred: name 'sno' is not defined
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+WARNING:2023-04-05 09:46:40,215:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:46:40,215:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:46:40,215:app:Hence stock's report card displayed, closing the connection
+ERROR:2023-04-05 09:46:40,215:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type NameError is not JSON serializable
+ERROR:2023-04-05 09:46:40,215:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type NameError is not JSON serializable
+ERROR:2023-04-05 09:46:40,215:app:Exception on /search/ITC [GET]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 113, in search_stock
+    cur.execute(show_query, (sno, ))
+NameError: name 'sno' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 121, in search_stock
+    return jsonify({"message": error})
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type NameError is not JSON serializable
+WARNING:2023-04-05 09:48:12,095:app:Starting the db connection to display stock's report card
+INFO:2023-04-05 09:48:12,239:app:Displayed stocks no. ITC
+INFO:2023-04-05 09:48:12,239:app:Displayed stocks no. ITC
+WARNING:2023-04-05 09:48:12,239:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:48:12,239:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:48:12,239:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:48:27,036:app:Starting the db connection to display transaction history
+WARNING:2023-04-05 09:48:27,036:app:Starting the db connection to display transaction history
+WARNING:2023-04-05 09:48:27,036:app:Starting the db connection to display transaction history
+WARNING:2023-04-05 09:48:27,036:app:Starting the db connection to display transaction history
+INFO:2023-04-05 09:48:27,171:app:Displayed transaction history
+INFO:2023-04-05 09:48:27,171:app:Displayed transaction history
+INFO:2023-04-05 09:48:27,171:app:Displayed transaction history
+INFO:2023-04-05 09:48:27,171:app:Displayed transaction history
+INFO:2023-04-05 09:48:27,171:app:Displayed transaction history
+WARNING:2023-04-05 09:48:27,171:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:48:27,171:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:48:27,171:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:48:27,171:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:48:27,171:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:48:27,171:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:48:58,064:app:Starting the db connection to display transaction history
+INFO:2023-04-05 09:48:58,199:app:Displayed transaction history
+INFO:2023-04-05 09:48:58,199:app:Displayed transaction history
+WARNING:2023-04-05 09:48:58,199:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:48:58,199:app:Hence stock's report card displayed, closing the connection
+WARNING:2023-04-05 09:48:58,199:app:Hence stock's report card displayed, closing the connection
