@@ -14,7 +14,7 @@ app = Flask(__name__)
 # CREATE TABLE stocks(sno SERIAL PRIMARY KEY, stock_name VARCHAR(200) NOT NULL ,
 # status VARCHAR(200), profits NUMERIC, losses NUMERIC, balance NUMERIC);
 
-# Table
+# Stocks table
 #  sno | stock_name  | status  | returns | balance | calculated
 # -----+-------------+---------+---------+---------+------------
 #    1 | Adani Power | selling |   -2000 |    2800 | t
@@ -24,6 +24,15 @@ app = Flask(__name__)
 #    5 | sysco       | buying  |     200 |    1200 |
 #    6 | ABCD        | buying  |     100 |    1000 |
 
+# Watchlist table
+#  sno |      stock_name      |       about        | price
+# -----+----------------------+--------------------+-------
+#    1 | Mindtree             | Software Company   |   221
+#    2 | Pricol               | Automobile Company |   125
+#    3 | Arrow greentech      | Packaging Company  |   277
+#    4 | Bigbloc Construction | Building materials |   132
+#    5 | Dixon Technologies   | Household durables |  2982
+#    6 | Dabur India          | Personal products  |   527
 
 
 
@@ -83,19 +92,24 @@ def get_stock_report(sno):
     return jsonify({"message": data}), 200
 
 
-@app.route("/search/<string:stock_name>", methods=["GET"], endpoint='search_stock')
+@app.route("/stocks/search/<string:stock_name>", methods=["GET"], endpoint='search_stock')
 @handle_exceptions
 def search_stock(stock_name):
     cur, conn = connection()
-    logger(__name__).warning("Starting the db connection to display stock's report card")
+    logger(__name__).warning("Starting the db connection to search stocks")
 
     show_query = "SELECT * FROM stocks WHERE stock_name = %s;"
     cur.execute(show_query, (stock_name,))
-    data = cur.fetchone()
+    get_stocks = cur.fetchone()
+
+    if not get_stocks:
+        # Log the details into logger file
+        logger(__name__).info(f"{stock_name} not found in the list")
+        return jsonify({"message": f"{stock_name} not found in the list"}), 200
 
     # Log the details into logger file
-    logger(__name__).info(f"Displayed stocks no. {stock_name}")
-    return jsonify({"message": data}), 200
+    logger(__name__).info(f"{stock_name} found in the list")
+    return jsonify({"message": f"{stock_name} not found in the list"}), 200
 
 
 @app.route("/transactions", methods=["GET"], endpoint='view_transaction_history')
@@ -119,10 +133,11 @@ def update_stock_details(sno):
     logger(__name__).warning("Starting the db connection to update the details ")
 
     cur.execute("SELECT stock_name from stocks where sno = %s", (sno,))
-    get_character = cur.fetchone()
+    get_stocks = cur.fetchone()
 
-    if not get_character:
-        return jsonify({"message": "Character not found"}), 200
+    if not get_stocks:
+        return jsonify({"message": "Stocks not found"}), 200
+
     data = request.get_json()
     stock_name = data.get('stock_name')
     status = data.get('status')
@@ -191,7 +206,56 @@ def delete_stock(sno):
     return jsonify({"message": "Deleted Successfully", "char no": sno}), 200
 
 
+@app.route("/watchlist", methods=["POST"], endpoint='add_to_watchlist')
+@handle_exceptions
+def add_to_watchlist():
+    # Start the database connection
+    cur, conn = connection()
+    logger(__name__).warning("Starting the db connection to add new stocks")
 
+    # Get values from the user
+    stock_name = request.json["stockName"]
+    about = request.json["about"]
+    price = request.json["price"]
+
+    # format = {
+    #     "stockName": "sysco",
+    #     "about": "Watch company",
+    #     "price": 200,
+    # }
+
+    # Insert query
+    add_query = """INSERT INTO watchlist(stock_name, about, price) VALUES (%s, %s, %s)"""
+    values = (stock_name, about, price)
+
+    # Execute query
+    cur.execute(add_query, values)
+
+    # Commit te changes to table
+    conn.commit()
+
+    logger(__name__).info(f"{stock_name} added to watchlist")
+    return jsonify({"message": f"{stock_name} added to watchlist"}), 200
+
+
+@app.route("/watchlist/search/<string:stock_name>", methods=["GET"], endpoint='search_stock_in_watchlist')
+@handle_exceptions
+def search_stock_in_watchlist(stock_name):
+    cur, conn = connection()
+    logger(__name__).warning("Starting the db connection to search stocks")
+
+    show_query = "SELECT * FROM watchlist WHERE stock_name = %s;"
+    cur.execute(show_query, (stock_name,))
+    get_stocks = cur.fetchone()
+
+    if not get_stocks:
+        # Log the details into logger file
+        logger(__name__).info(f"{stock_name} not found in the watchlist")
+        return jsonify({"message": f"{stock_name} not found in the watchlist"}), 200
+
+    # Log the details into logger file
+    logger(__name__).info(f"{stock_name} found in the watchlist")
+    return jsonify({"message": f"{stock_name} not found in the watchlist"}), 200
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

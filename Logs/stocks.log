@@ -683,3 +683,156 @@ INFO:2023-04-05 12:41:44,894:app:Displayed list of all stocks in the list
 WARNING:2023-04-05 12:41:44,895:app:Closing the connection
 WARNING:2023-04-05 12:41:44,895:app:Closing the connection
 WARNING:2023-04-05 12:41:44,895:app:Closing the connection
+WARNING:2023-04-13 16:49:42,460:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:49:42,637:settings:Hence account created, closing the connection
+ERROR:2023-04-13 16:49:42,637:app:Exception on /watchlist [POST]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/settings.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 224, in add_to_watchlist
+    cur.execute(add_query, values)
+psycopg2.errors.UndefinedColumn: column "about" of relation "stocks" does not exist
+LINE 1: INSERT INTO stocks(stock_name, about,  
+                                       ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/settings.py", line 32, in wrapper
+    except psycopg2.Error as error:
+NameError: name 'psycopg2' is not defined
+WARNING:2023-04-13 16:50:20,643:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:50:20,821:settings:Hence account created, closing the connection
+ERROR:2023-04-13 16:50:20,822:app:Exception on /watchlist [POST]
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/settings.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/app.py", line 223, in add_to_watchlist
+    cur.execute(add_query, values)
+psycopg2.errors.UndefinedColumn: column "about" of relation "stocks" does not exist
+LINE 1: INSERT INTO stocks(stock_name, about, price) VALUES ('Mindtr...
+                                       ^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/bc2113451/Desktop/VS Code/Oops/.venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/bc2113451/Desktop/VS Code/Oops/Trading/settings.py", line 32, in wrapper
+    except psycopg2.Error as error:
+NameError: name 'psycopg2' is not defined
+WARNING:2023-04-13 16:50:42,844:app:Starting the db connection to add new stocks
+INFO:2023-04-13 16:50:43,019:app:Mindtree added to watchlist
+INFO:2023-04-13 16:50:43,019:app:Mindtree added to watchlist
+WARNING:2023-04-13 16:50:43,019:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:51:35,926:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:51:35,926:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:51:35,926:app:Starting the db connection to add new stocks
+INFO:2023-04-13 16:51:36,083:app:Pricol added to watchlist
+INFO:2023-04-13 16:51:36,083:app:Pricol added to watchlist
+INFO:2023-04-13 16:51:36,083:app:Pricol added to watchlist
+INFO:2023-04-13 16:51:36,083:app:Pricol added to watchlist
+WARNING:2023-04-13 16:51:36,084:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:51:36,084:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:52:05,347:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:52:05,347:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:52:05,347:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:52:05,347:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:52:05,347:app:Starting the db connection to add new stocks
+INFO:2023-04-13 16:52:05,492:app:Arrow greentech added to watchlist
+INFO:2023-04-13 16:52:05,492:app:Arrow greentech added to watchlist
+INFO:2023-04-13 16:52:05,492:app:Arrow greentech added to watchlist
+INFO:2023-04-13 16:52:05,492:app:Arrow greentech added to watchlist
+INFO:2023-04-13 16:52:05,492:app:Arrow greentech added to watchlist
+INFO:2023-04-13 16:52:05,492:app:Arrow greentech added to watchlist
+WARNING:2023-04-13 16:52:05,493:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:52:05,493:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:52:05,493:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:52:34,835:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:52:34,835:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:52:34,835:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:52:34,835:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:52:34,835:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:52:34,835:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:52:34,835:app:Starting the db connection to add new stocks
+INFO:2023-04-13 16:52:34,977:app:Bigbloc Construction added to watchlist
+INFO:2023-04-13 16:52:34,977:app:Bigbloc Construction added to watchlist
+INFO:2023-04-13 16:52:34,977:app:Bigbloc Construction added to watchlist
+INFO:2023-04-13 16:52:34,977:app:Bigbloc Construction added to watchlist
+INFO:2023-04-13 16:52:34,977:app:Bigbloc Construction added to watchlist
+INFO:2023-04-13 16:52:34,977:app:Bigbloc Construction added to watchlist
+INFO:2023-04-13 16:52:34,977:app:Bigbloc Construction added to watchlist
+INFO:2023-04-13 16:52:34,977:app:Bigbloc Construction added to watchlist
+WARNING:2023-04-13 16:52:34,978:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:52:34,978:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:52:34,978:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:52:34,978:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:53:08,458:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:08,458:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:08,458:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:08,458:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:08,458:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:08,458:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:08,458:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:08,458:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:08,458:app:Starting the db connection to add new stocks
+INFO:2023-04-13 16:53:08,632:app:Dixon Technologies added to watchlist
+INFO:2023-04-13 16:53:08,632:app:Dixon Technologies added to watchlist
+INFO:2023-04-13 16:53:08,632:app:Dixon Technologies added to watchlist
+INFO:2023-04-13 16:53:08,632:app:Dixon Technologies added to watchlist
+INFO:2023-04-13 16:53:08,632:app:Dixon Technologies added to watchlist
+INFO:2023-04-13 16:53:08,632:app:Dixon Technologies added to watchlist
+INFO:2023-04-13 16:53:08,632:app:Dixon Technologies added to watchlist
+INFO:2023-04-13 16:53:08,632:app:Dixon Technologies added to watchlist
+INFO:2023-04-13 16:53:08,632:app:Dixon Technologies added to watchlist
+INFO:2023-04-13 16:53:08,632:app:Dixon Technologies added to watchlist
+WARNING:2023-04-13 16:53:08,632:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:53:08,632:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:53:08,632:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:53:08,632:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:53:08,632:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:53:34,411:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:34,411:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:34,411:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:34,411:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:34,411:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:34,411:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:34,411:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:34,411:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:34,411:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:34,411:app:Starting the db connection to add new stocks
+WARNING:2023-04-13 16:53:34,411:app:Starting the db connection to add new stocks
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+INFO:2023-04-13 16:53:34,564:app:Dabur India added to watchlist
+WARNING:2023-04-13 16:53:34,565:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:53:34,565:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:53:34,565:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:53:34,565:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:53:34,565:settings:Hence account created, closing the connection
+WARNING:2023-04-13 16:53:34,565:settings:Hence account created, closing the connection
