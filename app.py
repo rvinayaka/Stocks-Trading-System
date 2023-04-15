@@ -158,7 +158,7 @@ def update_stock_details(sno):
     logger(__name__).info(f"Stocks details updated: {data}")
     return jsonify({"message": "stocks details updated", "Details": data}), 200
 
-@app.route("/returns/<string:stock_name>", methods=["GET", 'PUT'], endpoint='calc_returns')
+@app.route("/returns/<string:stock_name>", methods=['PUT'], endpoint='calc_returns')
 @handle_exceptions
 def calc_returns(stock_name):   # calculate returns of each stock
     cur, conn = connection()
